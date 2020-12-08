@@ -1,5 +1,5 @@
 {
-  "name": "vuejs-starterkit",
+  "name": "Project for Aleh",
   "version": "1.0.0",
   "description": "A Vue.js starter-kit project",
   "keywords": [
@@ -9,7 +9,7 @@
     "vue-router",
     "webpack"
   ],
-  "author": "Matthias Adler",
+  "author": "Aleh Gunko",
   "private": true,
   "license": "MIT",
   "scripts": {
