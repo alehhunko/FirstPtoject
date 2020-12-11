@@ -1,5 +1,5 @@
 {
-  "name": "Project for Aleh",
+  "name": "Aleh",
   "version": "1.0.0",
   "description": "A Vue.js starter-kit project",
   "keywords": [
@@ -13,14 +13,7 @@
   "private": true,
   "license": "MIT",
   "scripts": {
-    "prepush": "npm run eslint",
-    "dev": "node build/dev-server.js",
-    "start": "npm run dev",
-    "build": "node build/build.js",
-    "unit": "cross-env BABEL_ENV=test karma start test/unit/karma.conf.js --single-run",
-    "e2e": "cross-env PORT=8081 node test/e2e/runner.js",
-    "test": "npm run unit && npm run e2e",
-    "eslint": "eslint --ext .js,.vue build config src test/unit/specs test/e2e/specs"
+    "start": "npm run dev"
   },
   "dependencies": {
     "js-cookie": "^2.2.0",
