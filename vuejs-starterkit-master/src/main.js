@@ -10,7 +10,7 @@ sync(store, router);
 
 /* eslint-disable no-new */
 new Vue({
-  el: '#app',
+  el: '#learnOleh',
   functional: true,
   router,
   store,
