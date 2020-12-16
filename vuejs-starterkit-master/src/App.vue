@@ -4,6 +4,7 @@
       <router-link :to="{ name: 'home' }">Vue.js PWA</router-link>
       <router-link :to="{ name: 'router' }">Router</router-link>
       <router-link :to="{ name: 'store' }">Store</router-link>
+      <router-link :to="{ name: 'aleh1' }">ALEH</router-link>
     </header>
     <main>
       <img src="@/assets/images/logo.png" alt="Vue.js PWA">
