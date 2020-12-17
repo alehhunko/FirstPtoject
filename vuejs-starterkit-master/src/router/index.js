@@ -4,7 +4,7 @@ import HelloComponent from '@/components/Hello';
 import RouterComponent from '@/components/Router';
 import RouterChildComponent from '@/components/RouterChild';
 import StoreComponent from '@/components/Store';
-import AlehComponent from '@/components/Aleh';
+import DevelopComponent from '@/components/Develop';
 
 Vue.use(Router);
 
@@ -13,9 +13,9 @@ const router = new Router({
   base: process.env.ROUTER_PREFIX,
   routes: [
     {
-      path: '/aleh',
-      name: 'aleh1',
-      component: AlehComponent,
+      path: '/develop',
+      name: 'develop',
+      component: DevelopComponent,
     },
     {
       path: '/',
