@@ -5,7 +5,10 @@ import RouterComponent from '@/components/Router';
 import RouterChildComponent from '@/components/RouterChild';
 import StoreComponent from '@/components/Store';
 import DevelopComponent from '@/components/Develop';
+import Antd from 'ant-design-vue';
+import 'ant-design-vue/dist/antd.css';
 
+Vue.use(Antd);
 Vue.use(Router);
 
 const router = new Router({

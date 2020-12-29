@@ -23,6 +23,7 @@
     "eslint": "eslint --ext .js,.vue build config src test/unit/specs test/e2e/specs"
   },
   "dependencies": {
+    "ant-design-vue": "^1.7.2",
     "js-cookie": "^2.2.0",
     "vue": "^2.5.16",
     "vue-router": "^3.0.1",
