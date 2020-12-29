@@ -2,39 +2,25 @@
 
 module.exports = {
   root: true,
-  parser: 'babel-eslint',
-  parserOptions: {
-    sourceType: 'module'
-  },
   env: {
-    browser: true,
+    // this section will be used to determine which APIs are available to us
+    // (i.e are we running in a browser environment or a node.js env)
+    node: true,
+    browser: true
   },
-  extends: 'airbnb-base',
-  // required to lint *.vue files
-  plugins: [
-    'html'
+  parserOptions: {
+    parser: "babel-eslint",
+    // specifying a module sourcetype prevent eslint from marking import statements as errors
+    sourceType: "module"
+  },
+  extends: [
+    // use the recommended rule set for both plain javascript and vue
+    "eslint:recommended",
+    "plugin:vue/recommended"
   ],
-  // check if imports actually resolve
-  settings: {
-    'import/resolver': {
-      webpack: {
-        config: 'build/webpack.base.conf.js'
-      }
-    }
-  },
-  // add your custom rules here
   rules: {
-    // don't require .vue extension when importing
-    'import/extensions': ['error', 'always', {
-      'js': 'never',
-      'vue': 'never'
-    }],
-    // allow optionalDependencies
-    'import/no-extraneous-dependencies': ['error', {
-      'optionalDependencies': ['test/unit/index.js']
-    }],
-    // allow debugger during development
-    'no-debugger': process.env.NODE_ENV === 'production' ? 2 : 0,
-    'max-len': ['error', 120],
+    // we should always disable console logs and debugging in production
+    "no-console": process.env.NODE_ENV === "production" ? "error" : "off",
+    "no-debugger": process.env.NODE_ENV === "production" ? "error" : "off"
   }
 };

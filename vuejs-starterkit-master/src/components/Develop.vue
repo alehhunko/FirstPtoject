@@ -17,7 +17,6 @@
 </template>
 
 <script>
- /* eslint-disable indent, no-trailing-spaces, block-spacing, space-infix-ops, no-eval, semi, brace-style */ 
 export default {
    name: 'develop',
    data() {
@@ -29,13 +28,12 @@ export default {
        };
   },
   methods: {
-    suma() { 
-       if (this.sign===0) {
-          this.culc=0;
-          }
-       else {
-          this.culc=eval(this.first + this.sign + this.second);
-          }
+    suma() {
+      if (this.sign === 0) {
+        this.culc = 0;
+      } else {
+        this.culc = eval(this.first + this.sign + this.second);
+      }
     },
   },
 };
