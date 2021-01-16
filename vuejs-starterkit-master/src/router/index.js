@@ -5,6 +5,7 @@ import RouterComponent from '@/components/Router';
 import RouterChildComponent from '@/components/RouterChild';
 import StoreComponent from '@/components/Store';
 import DevelopComponent from '@/components/Develop';
+import ServicesComponent from '@/components/Services';
 import Antd from 'ant-design-vue';
 import 'ant-design-vue/dist/antd.css';
 
@@ -15,6 +16,11 @@ const router = new Router({
   mode: 'history',
   base: process.env.ROUTER_PREFIX,
   routes: [
+    {
+      path: '/services',
+      name: 'services',
+      component: ServicesComponent,
+    },
     {
       path: '/develop',
       name: 'develop',
