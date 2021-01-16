@@ -24,7 +24,7 @@ export default {
   name: 'hello',
   data() {
     return {
-      msg: 'Основная  страница',
+      msg: 'Основная страница',
     };
   },
 };
