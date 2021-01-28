@@ -16,7 +16,7 @@ Vue.use(Vuex);
    actions: {
       getMail (context) {
          axios
-             .get('https://jsonplaceholder.typicode.com/comments?_limit=8')
+             .get('https://jsonplaceholder.typicode.com/comments?_limit=6')
              .then(response => {context.commit('SET_MAIL', response.data)});
      }
    },
