@@ -19,8 +19,10 @@
       type="number"
       v-model="second"
     ></a-input>
-    <br />
+    <br/>
     <div><a-button type="danger" @click="suma">РАВНО</a-button>={{ culc }}</div>
+    <br/>
+    <p>Комментарий из Services "{{coment}}"</p>
   </div>
 </template>
 
@@ -44,5 +46,10 @@ export default {
       }
     },
   },
+  computed: {
+   coment () {
+      return this.$store.state.newpost;
+    }
+  }
 };
 </script>
