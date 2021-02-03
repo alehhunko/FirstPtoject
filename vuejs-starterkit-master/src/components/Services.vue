@@ -3,10 +3,11 @@
     <div v-for="element in info" v-bind:key="element.id">{{ element.description }} : {{ element.rate }}</div>
     <br/>
     <mopo/>
-    <br/>Коментарий
-     <p><input type="text" v-model="coment" style="width: 700px"></p>
-     <div><a-button type="danger" @click="addcoment">Добавить</a-button></div>
-     
+    <br/>Имя
+     <p><input type="text" v-model="name" style="width: 500px"></p>
+    <br/>Коментарий 
+     <p><input type="text" v-model="coment" style="width: 500px"></p>
+     <div><a-button type="danger" @click="addcoment(); addname();">Добавить</a-button></div>
   </div>
 </template>
 
@@ -23,6 +24,7 @@ export default {
     return {
       info: null,
       coment: '',
+      name: '',
     };
   },
   mounted() {
@@ -33,6 +35,9 @@ export default {
   methods: {
     addcoment() {
       this.$store.commit('SET_POST', this.coment);
+    },
+    addname() {
+      this.$store.commit('SET_NAME', this.name);
     },
   },
 };

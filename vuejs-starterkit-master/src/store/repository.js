@@ -7,20 +7,26 @@ Vue.use(Vuex);
  const repository = new Vuex.Store ({
    state:{
       all: [],
-      newpost: ''
-
+      newpost: {
+         name: 'new name',
+         post: 'new post',
+      }
    },
    mutations: {
-      SET_MAIL (state, mail) {
-         state.all = mail;},
+      SET_ALL (state, all) {
+         state.all = all;},
       SET_POST  (state, coment) {
-         state.newpost = coment;}
+         state.newpost.post = coment;},
+      SET_NAME  (state, name) {
+         state.newpost.name = name;},
+      SET_DEL  (state) {
+         Vue.delete(state.newpost, 'post');}
    },
    actions: {
       getMail (context) {
          axios
              .get('https://jsonplaceholder.typicode.com/comments?_limit=4')
-             .then(response => {context.commit('SET_MAIL', response.data)});
+             .then(response => {context.commit('SET_ALL', response.data)});
      }
    },
    getters: {
