@@ -23,6 +23,7 @@
     <div><a-button type="danger" @click="suma">РАВНО</a-button>={{ culc }}</div>
     <br/>
     <p>Комментарий из Services "{{coment}}"</p>
+    <div><a-button type="danger" @click="delcoment">Удалить post</a-button></div>
   </div>
 </template>
 
@@ -44,6 +45,9 @@ export default {
       } else {
         this.culc = eval(this.first + this.sign + this.second);
       }
+    },
+    delcoment() {
+      this.$store.commit('SET_DEL');
     },
   },
   computed: {
